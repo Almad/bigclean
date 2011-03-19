@@ -1,0 +1,773 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  <!-- Hlavička stránky -->
+    
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Veřejná databáze ČSÚ</title>
+
+
+<link rel="stylesheet" href="/vdbvo/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/tabulka.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/seznam-objektu.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/leftmenu.css" type="text/css" />
+
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+	/* IE Menu CSS */
+	/* csshover.htc file version: V1.21.041022 - Available for download from: http://www.xs4all.nl/~peterned/csshover.html */
+	body{behavior:url(/vdbvo/css/csshover.htc);
+	font-size:100%; /* to enable text resizing in IE */
+	}
+</style>
+<![endif]-->
+
+<!--[if IE 6]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie6.css" /> <![endif]-->
+<!--[if IE 7]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie7.css" /> <![endif]-->
+<!--[if IE 8]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie8.css" /> <![endif]-->
+
+
+
+
+<script type="text/javascript" src="/vdbvo/js/utils.js"></script>
+<script type="text/javascript" src="/vdbvo/js/menu.js"></script>
+<script type="text/javascript" src="/vdbvo/js/filtr.js"></script>
+
+
+  </head>
+  <body class="cs-body">
+   <div id="overall">
+      
+        <div id="underLine" >&nbsp;</div> 
+      
+      <table id="pagebox" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+          <td>
+            <!-- Horní menu -->
+            
+
+
+
+
+<div id="page">
+  <div id="over-top">
+    <div id="top">
+       <a id="top-homelink" href="/vdbvo/uvod.jsp" title="Úvodní stránka VDB"></a>
+       <div id="top-right">
+         <a href="mailto:vdb@czso.cz" title="Napište nám svoje připomínky a dotazy">Napište nám</a>&nbsp;|
+         <a href="http://www.czso.cz" title="Český statistický úřad">Web ČSÚ</a>&nbsp;|
+         
+         
+           <a href="/vdbvo/en/tabparam.jsp?voa=tabulka&amp;cislotab=SZB0090PU_KR&amp;&amp;kapitola_id=16" class="en-flag" title="English version">English</a>
+         
+       </div>
+       <div id="top-menu-over">
+         <div id="top-menu-left">
+           <div id="top-menu">
+             <ul id="topmenu">
+               <li class=" uvod-sirka-cs"><a href="/vdbvo/uvod.jsp?vo=tabulka" title="Úvodní stránka">Úvodní stránka</a></li>
+               <li style="width: 152px;" class=""><a href="/vdbvo/kaplist.jsp?page=strom&amp;closeall=1&amp;vo=tabulka" title="Navigační strom ">Navigační strom</a></li>
+               <li class="fag_cs"><a href="/vdb/vdb.jsp" title="Všeobecné informace o Veřejné databázi - projektu ČSÚ">O Veřejné databázi</a></li>
+               <li style="width: 141px;"><a href="/vdb/faq.jsp" title="Odpovědi na nejčastěji kladené dotazy ohledně VDB">Časté dotazy</a></li>
+               <li style="width: 200px;"><a href="/vdb/ukazatele.jsp" title="Definice ukazazelů">Definice ukazatelů</a></li>
+               <!--li style="width: 102px;"><a href="/vdb/odkazy.jsp" title="Odkazy">Odkazy</a></li-->
+               <li style="width: 116px;"><a href="napoveda.jsp?tema=tabparam" title="Nápověda k obsluze stránky [nové okno]" onclick="showHelp('tabparam'); return false;">Nápověda</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+
+            <div id="main">
+
+ <script type="text/javascript">
+<!--
+    function onSelectionSubmit()
+    {
+      var vElm = document.forms["paramform"].elements;
+
+      var bRowFound = false;
+      var bRowChecked = false;
+      var bColFound = false;
+      var bColChecked = false;
+
+      for (var e = 0; e < vElm.length; e++)
+      {
+        if (vElm[e].type == "checkbox")
+        {
+          if (vElm[e].name.indexOf("go_l") == 0)
+          {
+            if (vElm[e].checked)
+              bRowChecked = true;
+            bRowFound = true;
+          }
+          else if (vElm[e].name.indexOf("go_h") == 0)
+          {
+            if (vElm[e].checked)
+              bColChecked = true;
+            bColFound = true;
+          }
+        }
+      }
+
+      if (bRowFound && !bRowChecked)
+      {
+        alert("Alespoň jeden řádek musí být vybrán");
+        return false;
+      }
+      if (bColFound && !bColChecked)
+      {
+        alert("Alespoň jeden sloupec musí být vybrán");
+        return false;
+      }
+      return true;
+    }
+-->
+  </script>
+
+  <!-- Obsah stránky -->
+  <div id="content">
+    <h3 class="paddingleft"><span id="h3warning">Výběr parametrů pro tabulku&nbsp;-</span>&nbsp;&nbsp;<span><span class="fontblack">Místa v zařízeních sociální péče podle druhu zařízení v krajích</span></span>&nbsp;(<span class="maketa_kod">SZB0090PU_KR</span>)</h3>
+
+  <!-- Hlavní část s tabulkou -->
+  
+    
+      <p class="aleft paddingleft fontblack">Proveďte výběr hodnot nabízených parametrů, poté potvrdťe tlačítkem&nbsp;"Zobrazit tabulku"</p>
+      <!-- Skripty pro výběr stránky -->
+      
+
+
+
+    
+      <!--p style="text-align: center">Tabulka obsahuje volitelné uživatelské parametry. Na této stránce vyberte jejich hodnoty.</p -->
+
+      <!-- Formulář pro zadání parametrů -->
+      <form action="tabparam.jsp" id="paramform" onsubmit="return onSelectionSubmit()" style="display: inline;">
+        <div>
+        <input type="hidden" name="cislotab" value="SZB0090PU_KR" />
+<input type="hidden" name="kapitola_id" value="16" />
+
+        <input type="hidden" name="voa" value="tabulka" />
+        
+        
+        <!-- Potvrzení parametrů -->
+        <div class="parampotvrd">
+          <input type="hidden" name="go_zobraz" value="1" />
+          <span id="parampotvrdtab"></span>
+          <input class="tsubmit bghover" type="submit" id="zobraz_btn" onmouseover="showUnderLine('zobraz_btn')" onmouseout="hideUnderLine()" name="potvrd" value="Zobrazit tabulku" />&nbsp;
+          <!--  id="paramaktpat" -->
+          <input class="tsubmit bghover" type="submit" id="aktualizuj_btn" onmouseover="showUnderLine('aktualizuj_btn')" onmouseout="hideUnderLine()" name="aktualizuj" value="Aktualizovat" />
+        </div>
+        <br /><br />
+        
+        <!-- tabulka -->
+        <table class="aleft margintable topposition">
+          <tbody>
+            <tr>
+              <td>
+                <!-- tab_str_menu -->
+                
+                <!-- tab_str_menu konec -->
+              </td>
+            </tr>
+            <!-- makety_cnt  -->
+           
+           <!-- makety_cnt_konec  -->
+            
+                <!-- Formulář pro zadání parametrů -->
+                <!-- Tabulka -->
+                <tr>
+  <td class="zahlavi">
+
+<tbody>
+  <tr>
+    <td class="topalign">
+      <table cellspacing="0" cellpadding="0" class="aleft fleft">
+        <tbody>
+<!-- atributy --><!-- atributykonec -->
+        </tbody>
+      </table>
+    </td>
+    <td class="aright fright topalign">
+      <table cellspacing="0" cellpadding="0" class="aright fright table-td-detail">
+        <tbody><!-- parametry --><!-- PARAM CAS --><tr><td class="aright b fontblack">
+Stav k: </td><td class="aleft"><select name="cas_1_42" onchange="onParamChanged();">
+<option value="20071231">31.12.2007</option>
+<option value="20081231">31.12.2008</option>
+<option value="20091231" selected="selected">31.12.2009</option>
+</select>
+</td></tr>
+<!-- KONEC PARAM CAS --><!-- parametrykonec -->        </tbody>
+      </table>
+    </td>
+  </tr>
+</tbody>
+       </td>
+
+      </tr>
+
+      <tr>
+
+        <td class="bborder lbg lcol aleft" style="padding: 3px;" colspan="3">
+          <table width="100%" cellpadding="0" cellspacing="0">
+
+            <tr><td style="height: 10px;"></td></tr>
+
+            <tr>
+
+        <td class="objekt_tabulka" colspan="2">
+
+         <table class="tabulkax" cellspacing="0">
+      <tr>
+        <th class="hlavicka" rowspan="3" colspan="1">&nbsp;</th>
+        <th class="vstred hlavicka" valign="top" rowspan="3"><a class="vstred hlavicka" href="mi/mi_ukazatel.jsp?kodukaz=3865&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ukazatel.jsp?kodukaz=3865&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Počet míst</a></th>
+        <th class="hlavicka" colspan="20">z toho</th>
+      </tr>
+      <tr>
+        <th class="hlavicka">A</th>
+        <th class="hlavicka">B</th>
+        <th class="hlavicka">C</th>
+        <th class="hlavicka">D</th>
+        <th class="hlavicka">E</th>
+        <th class="hlavicka">F</th>
+        <th class="hlavicka">G</th>
+        <th class="hlavicka">H</th>
+        <th class="hlavicka">I</th>
+        <th class="hlavicka">J</th>
+        <th class="hlavicka">K</th>
+        <th class="hlavicka">L</th>
+        <th class="hlavicka">M</th>
+        <th class="hlavicka">N</th>
+        <th class="hlavicka">O</th>
+        <th class="hlavicka">P</th>
+        <th class="hlavicka">Q</th>
+        <th class="hlavicka">R</th>
+        <th class="hlavicka">S</th>
+        <th class="hlavicka">T</th>
+      </tr>
+      <tr>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=A&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=A&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Centra denních služeb</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=B&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=B&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Denní stacio- náře</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=C&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=C&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Týdenní stacio- náře</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=D&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=D&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Domovy pro osoby se zdrav. postižením</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=E&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=E&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Domovy pro seniory</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=F&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=F&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Domovy se zvláštním režimem</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=G&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=G&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Chráněné bydlení</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=H&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=H&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Azylové domy</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=I&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=I&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Domy na půl cesty</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=J&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=J&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Zařízení pro krizovou pomoc</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=K&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=K&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Nízkopra- hová denní centra</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=L&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=L&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Nízkopra- hová zařízení pro děti a mládež</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=M&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=M&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Nocle- hárny</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=N&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=N&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Terapeu- tické komunity</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=O&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=O&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Sociální poradny</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=P&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=P&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Sociálně terapeu- tické dílny</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=Q&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=Q&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Centra sociálně rehabili- tačních služeb</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=R&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=R&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Pracoviště ranné péče</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=S&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=S&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Intervenč- ní centra</a></th>
+        <th class="vstred hlavicka"><a class="vstred hlavicka" href="mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=T&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2910&amp;kodzaz=T&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Služby následné péče</a></th>
+      </tr>
+      <tr>
+        <td class="tucne legenda"><a class="tucne legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Česká republika</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132345&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132345&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">79 538</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132309&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132309&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">947</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132311&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132311&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 446</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132313&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132313&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">963</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132315&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132315&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">14 629</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132317&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132317&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">37 660</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132319&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132319&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8 336</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132321&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132321&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 617</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=48860983&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=48860983&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 811</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132305&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132305&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">359</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132323&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132323&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">71</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132325&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132325&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132327&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132327&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">100</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132307&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132307&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 236</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132329&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132329&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">251</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132331&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132331&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132333&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132333&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">950</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132335&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132335&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 008</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132337&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132337&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132339&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132339&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132341&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132341&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">130</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ010&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ010&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Hlavní město Praha</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=47116530&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=47116530&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 541</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132705&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132705&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">153</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132707&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132707&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">541</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132709&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132709&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">57</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132711&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132711&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">526</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132713&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132713&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 248</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132715&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132715&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">197</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132717&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132717&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">201</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132699&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132699&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">824</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132701&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132701&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">44</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132719&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132719&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">14</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132721&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132721&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132723&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132723&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132703&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132703&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">307</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132725&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132725&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132727&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132727&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132729&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132729&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">146</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132731&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132731&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">243</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132733&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132733&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132735&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132735&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132737&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132737&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">28</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ020&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ020&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Středočeský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132783&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132783&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 196</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132747&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132747&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132749&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132749&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">437</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132751&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132751&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">224</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132753&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132753&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 522</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132755&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132755&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 895</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132757&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132757&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">723</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132759&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132759&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">446</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132741&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132741&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">490</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132743&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132743&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">28</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132761&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132761&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">18</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132763&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132763&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132765&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132765&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132745&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132745&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">26</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132767&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132767&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">39</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132769&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132769&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132771&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132771&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">125</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132773&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132773&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">199</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132775&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132775&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132777&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132777&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132779&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132779&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ031&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ031&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Jihočeský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132827&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132827&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 255</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132791&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132791&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132793&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132793&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">214</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132795&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132795&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">106</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132797&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132797&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">765</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132799&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132799&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 941</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132801&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132801&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">392</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132803&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132803&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">126</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132785&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132785&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">291</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132787&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132787&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132805&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132805&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132807&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132807&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132809&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132809&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">100</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132789&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132789&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">25</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132811&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132811&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">66</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132813&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132813&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132815&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132815&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">86</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132817&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132817&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">63</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132819&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132819&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132821&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132821&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132823&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132823&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">36</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ032&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ032&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Plzeňský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132871&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132871&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 055</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132835&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132835&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132837&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132837&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">195</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132839&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132839&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">81</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132841&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132841&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 137</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132843&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132843&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 715</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132845&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132845&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">488</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132847&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132847&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">76</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132829&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132829&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">216</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132831&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132831&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132849&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132849&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132851&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132851&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132853&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132853&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132833&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132833&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">58</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132855&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132855&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132857&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132857&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132859&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132859&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">18</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132861&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132861&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">25</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132863&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132863&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132865&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132865&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132867&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132867&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">7</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ041&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ041&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Karlovarský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132915&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132915&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 376</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132879&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132879&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">130</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132881&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132881&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">146</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132883&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132883&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">17</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132885&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132885&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">572</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132887&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132887&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 004</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132889&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132889&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">244</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132891&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132891&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">17</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132873&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132873&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">127</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132875&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132875&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132893&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132893&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132895&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132895&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132897&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132897&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132877&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132877&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">35</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132899&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132899&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132901&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132901&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132903&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132903&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">60</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132905&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132905&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132907&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132907&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132909&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132909&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132911&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132911&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ042&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ042&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Ústecký kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132959&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132959&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8 426</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132923&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132923&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">27</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132925&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132925&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">266</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132927&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132927&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">80</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132929&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132929&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 978</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132931&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132931&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 190</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132933&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132933&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">951</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132935&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132935&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">163</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132917&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132917&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">550</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132919&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132919&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">43</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132937&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132937&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132939&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132939&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132941&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132941&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132921&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132921&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">79</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132943&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132943&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">15</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132945&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132945&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132947&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132947&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">30</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132949&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132949&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">42</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132951&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132951&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132953&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132953&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132955&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132955&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">11</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ051&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ051&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Liberecký kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133003&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133003&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 404</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132967&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132967&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">123</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132969&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132969&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">156</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132971&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132971&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">84</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132973&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132973&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">367</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132975&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132975&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">934</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132977&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132977&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">402</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132979&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132979&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">106</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132961&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132961&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">137</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132963&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132963&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132981&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132981&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132983&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132983&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132985&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132985&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132965&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132965&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">20</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132987&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132987&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">15</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132989&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132989&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132991&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132991&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">60</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132993&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132993&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132995&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132995&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132997&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132997&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49132999&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49132999&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ052&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ052&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Královéhradecký kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133047&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133047&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 142</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133011&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133011&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">56</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133013&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133013&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">280</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133015&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133015&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">37</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133017&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133017&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">727</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133019&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133019&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 236</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133021&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133021&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">328</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133023&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133023&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">48</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133005&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133005&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">295</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133007&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133007&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">19</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133025&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133025&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133027&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133027&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133029&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133029&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133009&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133009&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">40</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133031&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133031&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133033&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133033&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133035&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133035&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133037&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133037&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">66</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133039&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133039&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133041&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133041&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133043&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133043&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ053&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ053&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Pardubický kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133091&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133091&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">3 930</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133055&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133055&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133057&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133057&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">168</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133059&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133059&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133061&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133061&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">856</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133063&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133063&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 052</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133065&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133065&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">378</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133067&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133067&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">173</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133049&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133049&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">183</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133051&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133051&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">36</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133069&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133069&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">3</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133071&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133071&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133073&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133073&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133053&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133053&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133075&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133075&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133077&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133077&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133079&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133079&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">29</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133081&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133081&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133083&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133083&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133085&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133085&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133087&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133087&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ063&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ063&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Vysočina</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133135&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133135&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">3 994</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133099&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133099&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">40</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133101&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133101&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">284</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133103&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133103&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">44</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133105&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133105&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">635</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133107&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133107&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 149</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133109&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133109&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">422</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133111&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133111&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133093&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133093&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">194</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133095&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133095&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133113&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133113&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133115&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133115&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133117&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133117&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133097&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133097&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133119&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133119&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">30</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133121&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133121&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133123&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133123&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">91</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133125&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133125&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">89</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133127&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133127&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133129&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133129&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133131&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133131&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ064&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ064&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Jihomoravský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133179&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133179&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8 440</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133143&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133143&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">73</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133145&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133145&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">547</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133147&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133147&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">49</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133149&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133149&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 484</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133151&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133151&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">3 232</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133153&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133153&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 778</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133155&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133155&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">73</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133137&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133137&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">781</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133139&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133139&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">43</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133157&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133157&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133159&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133159&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133161&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133161&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133141&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133141&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">167</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133163&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133163&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">35</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133165&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133165&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133167&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133167&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">70</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133169&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133169&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">86</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133171&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133171&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133173&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133173&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133175&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133175&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">22</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ071&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ071&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Olomoucký kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133223&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133223&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 868</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133187&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133187&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">59</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133189&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133189&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">433</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133191&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133191&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">25</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133193&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133193&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 275</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133195&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133195&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 519</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133197&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133197&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">360</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133199&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133199&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">488</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133181&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133181&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">450</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133183&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133183&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">14</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133201&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133201&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">22</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133203&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133203&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133205&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133205&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133185&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133185&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">153</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133207&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133207&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133209&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133209&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133211&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133211&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133213&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133213&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">34</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133215&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133215&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133217&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133217&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133219&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133219&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">26</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ072&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ072&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Zlínský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133267&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133267&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 939</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133231&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133231&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">57</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133233&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133233&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">146</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133235&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133235&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">73</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133237&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133237&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 197</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133239&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133239&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">2 861</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133241&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133241&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">485</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133243&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133243&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">474</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133225&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133225&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">366</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133227&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133227&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">24</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133245&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133245&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133247&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133247&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133249&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133249&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133229&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133229&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">42</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133251&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133251&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133253&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133253&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133255&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133255&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">109</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133257&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133257&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">105</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133259&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133259&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133261&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133261&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133263&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133263&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="padding-left: 10px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ080&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=91&amp;kodzaz=CZ080&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Moravskoslezský kraj</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133311&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133311&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 972</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133275&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133275&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">183</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133277&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133277&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">633</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133279&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133279&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">62</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133281&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133281&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 588</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133283&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133283&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4 684</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133285&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133285&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">1 188</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133287&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133287&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">214</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133269&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133269&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">907</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133271&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133271&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">68</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133289&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133289&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">4</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133291&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133291&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133293&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133293&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133273&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133273&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">272</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133295&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133295&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">15</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133297&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133297&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133299&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133299&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">106</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133301&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133301&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">48</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133303&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133303&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133305&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133305&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=49133307&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=49133307&amp;kodjaz=203&amp;maska=%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+         </table>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td class="objekt_zapati">
+
+        </td>
+
+      </tr>
+
+   </tbody>
+
+    </table>
+
+
+                
+                <!-- Skripty pro volby parametrů -->
+              <script type="text/javascript" src="/vdbvo/js/zdrmak.js"></script>
+              <script type="text/javascript" src="/vdbvo/js/tabparams.js"></script>
+              <script type="text/javascript">
+                <!--
+                  var g_sParamZmenaText = "Parametry byly změněny - ";
+                  onParamPageLoad();
+                -->
+              </script>
+              </td>
+            </tr>
+          </tbody>
+        </table>  
+  
+        <!-- Potvrzení parametrů -->
+        <div class="parampotvrd_bottom">
+          <span id="parampotvrdpat"></span>
+          <input class="tsubmit bghover" type="submit" id="zobraz2_btn" onmouseover="showUnderLine('zobraz2_btn')" onmouseout="hideUnderLine()" name="potvrd" value="Zobrazit tabulku" />&nbsp;
+          <!--  id="paramaktpat" -->
+          <input class="tsubmit bghover" type="submit" id="aktualizuj2_btn" onmouseover="showUnderLine('aktualizuj2_btn')" onmouseout="hideUnderLine()" name="aktualizuj" value="Aktualizovat" />
+        </div>
+        </div>
+      </form>
+
+      <!-- Skripty pro volby parametrů -->
+      <script type="text/javascript" src="/vdbvo/js/tabparams.js"></script>
+      <script type="text/javascript">
+        <!--
+          var g_sParamZmenaText = "Parametry byly změněny - ";
+          onParamPageLoad();
+        -->
+      </script>
+    
+
+    
+  
+
+
+            <!-- Patička stránky -->
+            
+
+
+
+
+
+
+  
+   <!-- zobrazení patičky pro FireFox a IE7 -->
+    <div id="stin">
+      <div id="paticka">
+        <div class="odkazy"></div>
+        <div id="aktualizace">
+          <div class="aktualizaceInner">VDB Web  1.3.10 </div>
+          <div class="aktualizaceInner acenter"><a href="http://www.czso.cz" title="&copy; Český statistický úřad">&copy; Český statistický úřad</a></div>
+          <div class="aktualizaceInner aright">Vygenerováno 19.03.2011 14:56 </div>
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  
+  
+
+
+          </div> <!-- konec main -->
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div> <!-- konec overall -->
+    <!-- Google analytics -->
+    
+
+
+
+  <script type="text/javascript">
+    <!--
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    -->
+    </script>
+    <script type="text/javascript">
+    <!-- 
+    try 
+    {
+      var pageTracker = _gat._getTracker("UA-535286-1");
+      pageTracker._trackPageview();
+      pageTracker._setDomainName("");
+      pageTracker._setCampaignTrack(false);
+    } catch(err) {}
+    -->
+  </script>
+
+
+  </body>
+</html>

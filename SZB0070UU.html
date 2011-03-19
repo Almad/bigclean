@@ -1,0 +1,451 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+  <!-- Hlavička stránky -->
+    
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Veřejná databáze ČSÚ</title>
+
+
+<link rel="stylesheet" href="/vdbvo/css/style.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/tabulka.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/seznam-objektu.css" type="text/css" />
+<link rel="stylesheet" href="/vdbvo/css/leftmenu.css" type="text/css" />
+
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+	/* IE Menu CSS */
+	/* csshover.htc file version: V1.21.041022 - Available for download from: http://www.xs4all.nl/~peterned/csshover.html */
+	body{behavior:url(/vdbvo/css/csshover.htc);
+	font-size:100%; /* to enable text resizing in IE */
+	}
+</style>
+<![endif]-->
+
+<!--[if IE 6]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie6.css" /> <![endif]-->
+<!--[if IE 7]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie7.css" /> <![endif]-->
+<!--[if IE 8]>   <link rel="stylesheet" type="text/css" href="/vdbvo/css/style_ie8.css" /> <![endif]-->
+
+
+
+
+<script type="text/javascript" src="/vdbvo/js/utils.js"></script>
+<script type="text/javascript" src="/vdbvo/js/menu.js"></script>
+<script type="text/javascript" src="/vdbvo/js/filtr.js"></script>
+
+
+  </head>
+  <body class="cs-body">
+   <div id="overall">
+      
+        <div id="underLine" >&nbsp;</div> 
+      
+      <table id="pagebox" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+          <td>
+            <!-- Horní menu -->
+            
+
+
+
+
+<div id="page">
+  <div id="over-top">
+    <div id="top">
+       <a id="top-homelink" href="/vdbvo/uvod.jsp" title="Úvodní stránka VDB"></a>
+       <div id="top-right">
+         <a href="mailto:vdb@czso.cz" title="Napište nám svoje připomínky a dotazy">Napište nám</a>&nbsp;|
+         <a href="http://www.czso.cz" title="Český statistický úřad">Web ČSÚ</a>&nbsp;|
+         
+         
+           <a href="/vdbvo/en/tabparam.jsp?voa=tabulka&amp;cislotab=SZB0070UU&amp;&amp;kapitola_id=16" class="en-flag" title="English version">English</a>
+         
+       </div>
+       <div id="top-menu-over">
+         <div id="top-menu-left">
+           <div id="top-menu">
+             <ul id="topmenu">
+               <li class=" uvod-sirka-cs"><a href="/vdbvo/uvod.jsp?vo=tabulka" title="Úvodní stránka">Úvodní stránka</a></li>
+               <li style="width: 152px;" class=""><a href="/vdbvo/kaplist.jsp?page=strom&amp;closeall=1&amp;vo=tabulka" title="Navigační strom ">Navigační strom</a></li>
+               <li class="fag_cs"><a href="/vdb/vdb.jsp" title="Všeobecné informace o Veřejné databázi - projektu ČSÚ">O Veřejné databázi</a></li>
+               <li style="width: 141px;"><a href="/vdb/faq.jsp" title="Odpovědi na nejčastěji kladené dotazy ohledně VDB">Časté dotazy</a></li>
+               <li style="width: 200px;"><a href="/vdb/ukazatele.jsp" title="Definice ukazazelů">Definice ukazatelů</a></li>
+               <!--li style="width: 102px;"><a href="/vdb/odkazy.jsp" title="Odkazy">Odkazy</a></li-->
+               <li style="width: 116px;"><a href="napoveda.jsp?tema=tabparam" title="Nápověda k obsluze stránky [nové okno]" onclick="showHelp('tabparam'); return false;">Nápověda</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+
+            <div id="main">
+
+ <script type="text/javascript">
+<!--
+    function onSelectionSubmit()
+    {
+      var vElm = document.forms["paramform"].elements;
+
+      var bRowFound = false;
+      var bRowChecked = false;
+      var bColFound = false;
+      var bColChecked = false;
+
+      for (var e = 0; e < vElm.length; e++)
+      {
+        if (vElm[e].type == "checkbox")
+        {
+          if (vElm[e].name.indexOf("go_l") == 0)
+          {
+            if (vElm[e].checked)
+              bRowChecked = true;
+            bRowFound = true;
+          }
+          else if (vElm[e].name.indexOf("go_h") == 0)
+          {
+            if (vElm[e].checked)
+              bColChecked = true;
+            bColFound = true;
+          }
+        }
+      }
+
+      if (bRowFound && !bRowChecked)
+      {
+        alert("Alespoň jeden řádek musí být vybrán");
+        return false;
+      }
+      if (bColFound && !bColChecked)
+      {
+        alert("Alespoň jeden sloupec musí být vybrán");
+        return false;
+      }
+      return true;
+    }
+-->
+  </script>
+
+  <!-- Obsah stránky -->
+  <div id="content">
+    <h3 class="paddingleft"><span id="h3warning">Výběr parametrů pro tabulku&nbsp;-</span>&nbsp;&nbsp;<span><span class="nazev">Průměrná měsíční výše důchodů<a class="poznindex" href="#pozn1">1</a></span></span>&nbsp;(<span class="maketa_kod">SZB0070UU</span>)</h3>
+
+  <!-- Hlavní část s tabulkou -->
+  
+    
+      <p class="aleft paddingleft fontblack">Proveďte výběr hodnot nabízených parametrů, poté potvrdťe tlačítkem&nbsp;"Zobrazit tabulku"</p>
+      <!-- Skripty pro výběr stránky -->
+      
+
+
+
+    
+      <!--p style="text-align: center">Tabulka obsahuje volitelné uživatelské parametry. Na této stránce vyberte jejich hodnoty.</p -->
+
+      <!-- Formulář pro zadání parametrů -->
+      <form action="tabparam.jsp" id="paramform" onsubmit="return onSelectionSubmit()" style="display: inline;">
+        <div>
+        <input type="hidden" name="cislotab" value="SZB0070UU" />
+<input type="hidden" name="kapitola_id" value="16" />
+
+        <input type="hidden" name="voa" value="tabulka" />
+        
+        
+        <!-- Potvrzení parametrů -->
+        <div class="parampotvrd">
+          <input type="hidden" name="go_zobraz" value="1" />
+          <span id="parampotvrdtab"></span>
+          <input class="tsubmit bghover" type="submit" id="zobraz_btn" onmouseover="showUnderLine('zobraz_btn')" onmouseout="hideUnderLine()" name="potvrd" value="Zobrazit tabulku" />&nbsp;
+          <!--  id="paramaktpat" -->
+          <input class="tsubmit bghover" type="submit" id="aktualizuj_btn" onmouseover="showUnderLine('aktualizuj_btn')" onmouseout="hideUnderLine()" name="aktualizuj" value="Aktualizovat" />
+        </div>
+        <br /><br />
+        
+        <!-- tabulka -->
+        <table class="aleft margintable topposition">
+          <tbody>
+            <tr>
+              <td>
+                <!-- tab_str_menu -->
+                
+                <!-- tab_str_menu konec -->
+              </td>
+            </tr>
+            <!-- makety_cnt  -->
+           
+           <!-- makety_cnt_konec  -->
+            
+                <!-- Formulář pro zadání parametrů -->
+                <!-- Tabulka -->
+                <tr>
+  <td class="zahlavi">
+
+<tbody>
+  <tr>
+    <td class="topalign">
+      <table cellspacing="0" cellpadding="0" class="aleft fleft">
+        <tbody>
+<!-- atributy --><!-- atributykonec -->
+        </tbody>
+      </table>
+    </td>
+    <td class="aright fright topalign">
+      <table cellspacing="0" cellpadding="0" class="aright fright table-td-detail">
+        <tbody><!-- parametry --><!-- PARAM CAS --><tr><td class="aright b fontblack">
+Rok: </td><td class="aleft"><select name="cas_1_26" onchange="onParamChanged();">
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009" selected="selected">2009</option>
+</select>
+</td></tr>
+<!-- KONEC PARAM CAS -->      <tr>
+        <td class="fontblack b nowrap aright">Měřicí jednotka:</td>        <td class="aleft fontblack nowrap" colspan="2">Kč</td>
+      </tr>
+      <tr>
+        <td class="fontblack b nowrap aright">Území:</td>        <td class="aleft fontblack nowrap" colspan="2">Česká republika</td>
+      </tr>
+<!-- parametrykonec -->        </tbody>
+      </table>
+    </td>
+  </tr>
+</tbody>
+       </td>
+
+      </tr>
+
+      <tr>
+
+        <td class="bborder lbg lcol aleft" style="padding: 3px;" colspan="3">
+          <table width="100%" cellpadding="0" cellspacing="0">
+
+            <tr><td style="height: 10px;"></td></tr>
+
+            <tr>
+
+        <td class="objekt_tabulka" colspan="2">
+
+         <table class="tabulkax" cellspacing="0">
+      <tr>
+        <th class="hlavicka" rowspan="2" colspan="3">&nbsp;</th>
+        <th class="hlavicka" style="width: 70px;" valign="top" rowspan="2"><a class="hlavicka" href="mi/mi_ukazatel.jsp?kodukaz=3899&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ukazatel.jsp?kodukaz=3899&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Výše důchodu</a></th>
+        <th class="hlavicka" colspan="2">v tom podle pohlaví</th>
+      </tr>
+      <tr>
+        <th class="hlavicka" style="width: 70px;"><a class="hlavicka" href="mi/mi_cishod.jsp?kodcis=2530&amp;kodzaz=1&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2530&amp;kodzaz=1&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">muži</a></th>
+        <th class="hlavicka" style="width: 70px;"><a class="hlavicka" href="mi/mi_cishod.jsp?kodcis=2530&amp;kodzaz=2&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=2530&amp;kodzaz=2&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">ženy</a></th>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 210px;" colspan="3"><a class="legenda" href="mi/mi_ukazatel.jsp?kodukaz=3899&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ukazatel.jsp?kodukaz=3899&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">Průměrná měsíční výše důchodů</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394118&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394118&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 803</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394119&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394119&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10 473</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394120&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394120&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 375</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;" valign="top" rowspan="9">Druh důchodu</td>
+        <td class="legenda" style="width: 140px;" valign="top" rowspan="2"><a class="legenda" href="mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">starobní důchod</a></td>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=01&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=01&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">plný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394121&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394121&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10 045</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394122&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394122&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">11 175</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394123&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394123&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 133</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=02&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=02&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">poměrný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394124&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394124&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 800</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394125&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394125&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6 117</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394126&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394126&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 775</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 140px;" valign="top" rowspan="2"><a class="legenda" href="mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">invalidní důchod</a></td>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=18&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=18&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">plný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394127&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394127&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">9 681</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394128&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394128&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10 301</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394129&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394129&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">8 925</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=04&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=04&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">částečný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394130&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394130&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6 076</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394131&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394131&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6 384</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394132&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394132&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 718</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 140px;" valign="top" rowspan="2"><a class="legenda" href="mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">vdovský důchod</a></td>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=06&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=06&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">sólo</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394133&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394133&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6 743</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394134&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394134&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394135&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394135&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">6 743</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=11&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=11&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">kombinovaný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394136&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394136&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10 955</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394137&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394137&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394138&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394138&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">10 955</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 140px;" valign="top" rowspan="2"><a class="legenda" href="mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_ciside.jsp?kodcis=1226&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">vdovecký</a></td>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=09&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=09&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">sólo</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394139&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394139&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 580</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394140&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394140&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 580</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394141&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394141&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=10&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=10&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">kombinovaný</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394142&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394142&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12 348</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394143&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394143&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">12 348</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394144&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394144&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">-</a></td>
+      </tr>
+      <tr>
+        <td class="legenda" style="width: 70px;" colspan="2"><a class="legenda" href="mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=14&amp;kodjaz=203&amp;app=vdb" onclick="openLink('mi/mi_cishod.jsp?kodcis=1226&amp;kodzaz=14&amp;kodjaz=203&amp;app=vdb'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">sirotčí důchod</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394145&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394145&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 145</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394146&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394146&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 114</a></td>
+        <td class="data" style="width: 60px;"><a class="data" href="mi/mi_hodnota.jsp?idhod=39394147&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230" onclick="openLink('mi/mi_hodnota.jsp?idhod=39394147&amp;kodjaz=203&amp;maska=%23%23%23%2C%23%23%23%2C%23%230'); return false;" target="_BLANK" title="Informace k prvku [nové okno]">5 169</a></td>
+      </tr>
+         </table>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td class="objekt_zapati">
+
+<table cellpadding="0" cellspacing="0">
+<tr><td style="font-weight: bold;" colspan="2">Poznámky</td></tr>
+<tr><td class="poznindex"><a name="pozn1"></a>1&nbsp;</td><td>k 31.12</td>
+</tr>
+</table>
+<table><tr><td style="height:5px;"></td></tr></table>
+        </td>
+
+      </tr>
+
+   </tbody>
+
+    </table>
+
+
+                
+                <!-- Skripty pro volby parametrů -->
+              <script type="text/javascript" src="/vdbvo/js/zdrmak.js"></script>
+              <script type="text/javascript" src="/vdbvo/js/tabparams.js"></script>
+              <script type="text/javascript">
+                <!--
+                  var g_sParamZmenaText = "Parametry byly změněny - ";
+                  onParamPageLoad();
+                -->
+              </script>
+              </td>
+            </tr>
+          </tbody>
+        </table>  
+  
+        <!-- Potvrzení parametrů -->
+        <div class="parampotvrd_bottom">
+          <span id="parampotvrdpat"></span>
+          <input class="tsubmit bghover" type="submit" id="zobraz2_btn" onmouseover="showUnderLine('zobraz2_btn')" onmouseout="hideUnderLine()" name="potvrd" value="Zobrazit tabulku" />&nbsp;
+          <!--  id="paramaktpat" -->
+          <input class="tsubmit bghover" type="submit" id="aktualizuj2_btn" onmouseover="showUnderLine('aktualizuj2_btn')" onmouseout="hideUnderLine()" name="aktualizuj" value="Aktualizovat" />
+        </div>
+        </div>
+      </form>
+
+      <!-- Skripty pro volby parametrů -->
+      <script type="text/javascript" src="/vdbvo/js/tabparams.js"></script>
+      <script type="text/javascript">
+        <!--
+          var g_sParamZmenaText = "Parametry byly změněny - ";
+          onParamPageLoad();
+        -->
+      </script>
+    
+
+    
+  
+
+
+            <!-- Patička stránky -->
+            
+
+
+
+
+
+
+  
+   <!-- zobrazení patičky pro FireFox a IE7 -->
+    <div id="stin">
+      <div id="paticka">
+        <div class="odkazy"></div>
+        <div id="aktualizace">
+          <div class="aktualizaceInner">VDB Web  1.3.10 </div>
+          <div class="aktualizaceInner acenter"><a href="http://www.czso.cz" title="&copy; Český statistický úřad">&copy; Český statistický úřad</a></div>
+          <div class="aktualizaceInner aright">Vygenerováno 19.03.2011 14:56 </div>
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  
+  
+
+
+          </div> <!-- konec main -->
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div> <!-- konec overall -->
+    <!-- Google analytics -->
+    
+
+
+
+  <script type="text/javascript">
+    <!--
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    -->
+    </script>
+    <script type="text/javascript">
+    <!-- 
+    try 
+    {
+      var pageTracker = _gat._getTracker("UA-535286-1");
+      pageTracker._trackPageview();
+      pageTracker._setDomainName("");
+      pageTracker._setCampaignTrack(false);
+    } catch(err) {}
+    -->
+  </script>
+
+
+  </body>
+</html>
